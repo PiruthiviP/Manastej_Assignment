@@ -1,0 +1,186 @@
+:root {
+  /* Color Palette - Light Theme (Warm editorial tone) */
+  --bg-app: #FAF8F5;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F3EFE9;
+  --bg-muted: #EBE5DB;
+  --bg-overlay: rgba(28, 27, 25, 0.4);
+
+  --text-primary: #1C1B19;
+  --text-secondary: #66635D;
+  --text-muted: #8F8A80;
+  --text-inverse: #FAF8F5;
+
+  --border-subtle: #E7E2D8;
+  --border-strong: #CEC7B9;
+  --border-focus: #1C1B19;
+
+  /* Accent Color: Warm Burnt Terracotta */
+  --accent: #C2542D;
+  --accent-hover: #A7431F;
+  --accent-subtle: #FAEDE8;
+  --accent-contrast: #FFFFFF;
+
+  /* Status Tokens (Deliberate, muted tones per column) */
+  --status-applied: #64748B;
+  --status-applied-bg: rgba(100, 116, 139, 0.08);
+  --status-applied-border: rgba(100, 116, 139, 0.25);
+
+  --status-screening: #B45309;
+  --status-screening-bg: rgba(180, 83, 9, 0.08);
+  --status-screening-border: rgba(180, 83, 9, 0.25);
+
+  --status-assignment: #4F46E5;
+  --status-assignment-bg: rgba(79, 70, 229, 0.08);
+  --status-assignment-border: rgba(79, 70, 229, 0.25);
+
+  --status-interview: #7E22CE;
+  --status-interview-bg: rgba(126, 34, 206, 0.08);
+  --status-interview-border: rgba(126, 34, 206, 0.25);
+
+  --status-offer: #0F766E;
+  --status-offer-bg: rgba(15, 118, 110, 0.08);
+  --status-offer-border: rgba(15, 118, 110, 0.25);
+
+  --status-rejected: #991B1B;
+  --status-rejected-bg: rgba(153, 27, 27, 0.08);
+  --status-rejected-border: rgba(153, 27, 27, 0.25);
+
+  /* Live Connection States */
+  --live-green: #15803D;
+  --live-green-bg: rgba(21, 128, 61, 0.12);
+  --live-amber: #D97706;
+  --live-amber-bg: rgba(217, 119, 6, 0.12);
+
+  /* Typography Scale */
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* 4px Spacing Scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+
+  /* Hairline borders & Geometry */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* Motion */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Dark Mode Tokens (Deep warm charcoal ink, not pitch black) */
+[data-theme='dark'] {
+  --bg-app: #121110;
+  --bg-surface: #1A1917;
+  --bg-subtle: #22201D;
+  --bg-muted: #2C2925;
+  --bg-overlay: rgba(0, 0, 0, 0.65);
+
+  --text-primary: #EDEAE5;
+  --text-secondary: #A09B91;
+  --text-muted: #6B665E;
+  --text-inverse: #121110;
+
+  --border-subtle: #292723;
+  --border-strong: #3D3934;
+  --border-focus: #EDEAE5;
+
+  --accent: #E0693E;
+  --accent-hover: #EC7A51;
+  --accent-subtle: #291811;
+  --accent-contrast: #FFFFFF;
+
+  --status-applied: #94A3B8;
+  --status-applied-bg: rgba(148, 163, 184, 0.12);
+  --status-applied-border: rgba(148, 163, 184, 0.3);
+
+  --status-screening: #F59E0B;
+  --status-screening-bg: rgba(245, 158, 11, 0.12);
+  --status-screening-border: rgba(245, 158, 11, 0.3);
+
+  --status-assignment: #818CF8;
+  --status-assignment-bg: rgba(129, 140, 248, 0.12);
+  --status-assignment-border: rgba(129, 140, 248, 0.3);
+
+  --status-interview: #C084FC;
+  --status-interview-bg: rgba(192, 132, 252, 0.12);
+  --status-interview-border: rgba(192, 132, 252, 0.3);
+
+  --status-offer: #2DD4BF;
+  --status-offer-bg: rgba(45, 212, 191, 0.12);
+  --status-offer-border: rgba(45, 212, 191, 0.3);
+
+  --status-rejected: #F87171;
+  --status-rejected-bg: rgba(248, 113, 113, 0.12);
+  --status-rejected-border: rgba(248, 113, 113, 0.3);
+
+  --live-green: #4ADE80;
+  --live-green-bg: rgba(74, 222, 128, 0.15);
+  --live-amber: #FBBF24;
+  --live-amber-bg: rgba(251, 191, 36, 0.15);
+}
+
+/* System Dark Mode Detection */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg-app: #121110;
+    --bg-surface: #1A1917;
+    --bg-subtle: #22201D;
+    --bg-muted: #2C2925;
+    --bg-overlay: rgba(0, 0, 0, 0.65);
+
+    --text-primary: #EDEAE5;
+    --text-secondary: #A09B91;
+    --text-muted: #6B665E;
+    --text-inverse: #121110;
+
+    --border-subtle: #292723;
+    --border-strong: #3D3934;
+    --border-focus: #EDEAE5;
+
+    --accent: #E0693E;
+    --accent-hover: #EC7A51;
+    --accent-subtle: #291811;
+    --accent-contrast: #FFFFFF;
+
+    --status-applied: #94A3B8;
+    --status-applied-bg: rgba(148, 163, 184, 0.12);
+    --status-applied-border: rgba(148, 163, 184, 0.3);
+
+    --status-screening: #F59E0B;
+    --status-screening-bg: rgba(245, 158, 11, 0.12);
+    --status-screening-border: rgba(245, 158, 11, 0.3);
+
+    --status-assignment: #818CF8;
+    --status-assignment-bg: rgba(129, 140, 248, 0.12);
+    --status-assignment-border: rgba(129, 140, 248, 0.3);
+
+    --status-interview: #C084FC;
+    --status-interview-bg: rgba(192, 132, 252, 0.12);
+    --status-interview-border: rgba(192, 132, 252, 0.3);
+
+    --status-offer: #2DD4BF;
+    --status-offer-bg: rgba(45, 212, 191, 0.12);
+    --status-offer-border: rgba(45, 212, 191, 0.3);
+
+    --status-rejected: #F87171;
+    --status-rejected-bg: rgba(248, 113, 113, 0.12);
+    --status-rejected-border: rgba(248, 113, 113, 0.3);
+
+    --live-green: #4ADE80;
+    --live-green-bg: rgba(74, 222, 128, 0.15);
+    --live-amber: #FBBF24;
+    --live-amber-bg: rgba(251, 191, 36, 0.15);
+  }
+}
+

@@ -1,0 +1,27 @@
+{
+  "name": "candidate-sync-server",
+  "version": "1.0.0",
+  "description": "Real-time candidate status synchronization backend with optimistic concurrency control",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node embedded.js",
+    "seed": "node seed.js",
+    "test": "jest --runInBand --detectOpenHandles"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.0",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "mongodb-memory-server": "^9.2.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testTimeout": 30000
+  }
+}

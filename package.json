@@ -1,0 +1,15 @@
+{
+  "name": "realtime-candidate-status-sync",
+  "version": "1.0.0",
+  "description": "Full-stack real-time candidate status synchronization with optimistic concurrency control",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "test": "npm --prefix server test",
+    "seed": "npm --prefix server run seed",
+    "server": "npm --prefix server start",
+    "server:dev": "npm --prefix server run dev",
+    "client": "npm --prefix client dev",
+    "build": "npm --prefix client run build"
+  }
+}
+
